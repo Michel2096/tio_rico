@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_db2
+    restart: always
+    environment:
+      POSTGRES_DB: entorn_db
+      POSTGRES_USER: entorn_user
+      POSTGRES_PASSWORD: entorn_pass
+    ports:
+      - "6000:6000"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

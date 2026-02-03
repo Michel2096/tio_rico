@@ -1,6 +1,7 @@
 from flask import Blueprint
 
-blueprint_home = Blueprint('home', _name_)
-@blueprint_home.route('/home')
+blueprint_home = Blueprint("home", __name__)
+
+@blueprint_home.route("/")
 def home():
-    return {'msn' : 'hola desde home'}
+    return {"message": "API Flask funcionando correctamente"}, 200
