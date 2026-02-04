@@ -4,11 +4,11 @@ services:
     container_name: postgres_db2
     restart: always
     environment:
-      POSTGRES_DB: entorn_db
+      POSTGRES_DB: entorn_db2
       POSTGRES_USER: entorn_user
       POSTGRES_PASSWORD: entorn_pass
     ports:
-      - "6000:6000"
+      - "6000:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

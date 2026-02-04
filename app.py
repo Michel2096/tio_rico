@@ -3,6 +3,7 @@ from controllers.HomeController import blueprint_home
 from extension import db, migrate
 from config import SQLALCHEMY_DATABASE_URI
 from dotenv import load_dotenv
+from models.user import User
 
 load_dotenv()
 
@@ -15,6 +16,8 @@ def create_app():
 
     db.init_app(app)
     migrate.init_app(app, db)
+
+    
 
     app.register_blueprint(blueprint_home)
 
